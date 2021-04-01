@@ -11,7 +11,7 @@ services:
     volumes:
       - ${MYSQL_Volumn_local}:${MYSQL_Volumn_container}:rw
     environment:
-      - MYSQL_ROOT_PASSWORD=Nchc@2020
+      - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
       - PGID=1000
       - PUID=1000
       - TZ=Asia/Taipei
