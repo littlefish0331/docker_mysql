@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  database:
+    container_name: "${COMPOSE_PROJECT_NAME}_mysql"
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - "8769:3306"
+    volumes:
+      - ${MYSQL_Volumn_local}:${MYSQL_Volumn_container}:rw
+    environment:
+      - MYSQL_ROOT_PASSWORD=Nchc@2020
+      - PGID=1000
+      - PUID=1000
+      - TZ=Asia/Taipei
