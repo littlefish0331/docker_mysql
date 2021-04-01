@@ -7,7 +7,7 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     ports:
-      - "8769:3306"
+      - "3306:3306"
     volumes:
       - ${MYSQL_Volumn_local}:${MYSQL_Volumn_container}:rw
     environment:
@@ -22,7 +22,7 @@ services:
     image: phpmyadmin/phpmyadmin:latest
     restart: always
     ports:
-      - "8770:80"
+      - "8080:80"
     environment:
       PMA_HOST: database
 
