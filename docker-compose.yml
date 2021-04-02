@@ -28,7 +28,6 @@ services:
       - "8080:80"
     environment:
       PMA_HOST: database
-      PMA_PORT: 3306
       PMA_ARBITRARY: 1
     networks:
       staticnet:
@@ -40,3 +39,4 @@ networks:
     ipam:
       config:
         - subnet: 192.168.0.0/16
+        # - gateway: 192.168.0.1 # set gatweway, use version:'2'.

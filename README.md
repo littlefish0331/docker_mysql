@@ -19,8 +19,8 @@
 
     應該需要更改兩個地方
 
-    - MYSQL_PASSWORD=xxx  ---> xxx改成自己的password
-    - MYSQL_Volumn_local=xxx  ---> xxx改成/datamount/vol/mysql
+    - MYSQL_PASSWORD=xxx  ---> xxx改成自己的 password
+    - MYSQL_Volumn_local=xxx  ---> xxx改成 /datamount/vol/mysql
 
 5. 在 docker_mysql/ 資料夾下，下指令 `docker-compose up -d`
 
