@@ -21,6 +21,8 @@ services:
     container_name: "${COMPOSE_PROJECT_NAME}_phpmyadmin"
     image: phpmyadmin/phpmyadmin:latest
     restart: always
+    volumes:
+      - ./vol/phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php:rw
     ports:
       - "8080:80"
     environment:
