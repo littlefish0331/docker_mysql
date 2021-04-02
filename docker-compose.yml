@@ -22,7 +22,7 @@ services:
     image: phpmyadmin/phpmyadmin:latest
     restart: always
     volumes:
-      - ./vol/phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php:rw
+      - ./vol/phpmyadmin:/etc/phpmyadmin:rw
     ports:
       - "8080:80"
     environment:
